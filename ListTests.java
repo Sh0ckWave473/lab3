@@ -14,6 +14,9 @@ public class ListTests{
             ArrayList<String>(Arrays.asList(" ", "P A"));
         StringChecker sC = new StringCheckerClass(" ");
         assertEquals(correctList, lE.filter(testList, sC));
+        testList.remove(0);
+        correctList.remove(0);
+        assertEquals(correctList, lE.filter(testList, sC));
     }
 
     @Test
